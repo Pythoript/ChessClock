@@ -1,0 +1,42 @@
+$borderColor: hsla(0, 0%, 100%, .1);
+$borderFocus: hsla(0, 0%, 100%, .3);
+$bgColor: hsla(0, 0%, 100%, .1);
+$textColor: hsla(0, 0%, 100%, .72);
+$secondaryTextColor: hsla(0, 0%, 100%, .5);
+
+input {
+    appearance: none;
+}
+.input-component {
+    color: $textColor;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    background-color: $bgColor;
+    border: .1rem solid $borderColor;
+    border-radius: 0.3rem;
+    height: 2.1rem;
+    padding: .4rem .8rem;
+
+    &:focus:not(:disabled),
+    &:focus-visible:not(:disabled),
+    &:hover:not(:disabled) {
+        outline: none;
+        border-color: $borderFocus;
+    }
+
+    &::placeholder {
+        color: $secondaryTextColor;
+        opacity: 1;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &[type="number"] {
+        appearance: textfield;
+        -moz-appearance:textfield;
+    }
+}
