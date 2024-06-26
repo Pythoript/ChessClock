@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_CA" xml:lang="en_CA">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html, charset=utf8">
+    <link rel="canonical" href="https://www.oceansidechess.org/clock/"/>
+    <meta name="description" content="ChessClock is a free, open-source, and easy-to-use chess clock application designed for all chess enthusiasts. This tool allows you to easily keep track of time in a convenient and accessible way.">
+    <meta name="language" content="en_CA">
+    <meta name="robots" content="max-snippet:-1, max-image-preview: large">
+    <meta name="country" content="ca">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  
+    <title>ChessClock - A Free Chess Clock for Everyone</title>
+    <link rel="stylesheet" href="./css/clock.min.css">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ChessClock">
+    <meta property="og:description" content="ChessClock is a free, open-source, and easy-to-use chess clock application designed for all chess enthusiasts. This tool allows you to easily keep track of time in a convenient and accessible way.">
+    <meta property="og:url" content="https://www.oceansidechess.org/clock/">
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <script defer src="./js/timer.js"></script>
+    <script defer src="./js/app.clock.js"></script>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <button aria-label="clock" class="clock start clock_one"></button>
+            <div class="controls">
+                <button class="chessfont" aria-label="pause" id="toggle">K</button>
+                <button class="chessfont" aria-label="reset" id="reset">L</button>
+                <button class="chessfont" aria-label="set custom time controls" id="time">'</button>
+            </div>
+            <button aria-label="clock" class="clock start clock_two"></button>
+            <dialog>
+                <form id="form" name="_form" method="dialog">
+                    <input type="number" aria-label="input Minutes" title="Enter number of Minutes" min="0"
+                        name="_minutes" class="input-component" placeholder="Minutes">
+                    <input type="number" aria-label="input Seconds" title="Enter number of Seconds" min="0" max="59"
+                        name="_seconds" class="input-component" placeholder="Seconds">
+                    <input type="number" aria-label="input Increment" title="Enter Increment" min="0" name="_increment"
+                        class="input-component" placeholder="Increment">
+                    <div class="btn_wrapper">
+                        <button type="submit" class="btn">Play</button>
+                        <button type="submit" class="btn btn_secondary">Close</button>
+                    </div>
+                </form>
+            </dialog>
+        </div>
+    </main>
+</body>
+</html>
