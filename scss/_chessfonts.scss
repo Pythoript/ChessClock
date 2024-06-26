@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'ChessFont';
+    src: url('../fonts/chessglyph-v3.eot');
+    src: url('../fonts/chessglyph-v3.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chessglyph-v3.woff2') format('woff2'),
+         url('../fonts/chessglyph-v3.woff') format('woff'),
+         url('../fonts/chessglyph-v3.ttf') format('truetype'),
+         url('../fonts/chessglyph-v3.svg#chessglyph-v3regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-size-large: clamp(3.6rem, 1.6842105263vw + 3.2631578947rem, 4rem);
+  }
+}
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-size-large: 3.6rem;
+  }
+  @media screen and (min-width: 700px) {
+    :root {
+      --font-size-large: 4rem;
+    }
+  }
+}
